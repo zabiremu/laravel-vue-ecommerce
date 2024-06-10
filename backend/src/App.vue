@@ -1,12 +1,13 @@
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
+import { computed } from "vue";
+import store from "./store";
+const test = computed(() => store.state.test);
 </script>
 
 <template>
     <div>
         <h1 class="bg-red-900">Hello</h1>
     </div>
-    <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>
